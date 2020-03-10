@@ -17,4 +17,7 @@ public interface NoteDAO {
 
     @Query("SELECT * from notes_table order by id desc")
     List<Note> getNotes();
+
+    @Query("Delete from notes_table where id=:id")
+    void delete(int id);
 }
